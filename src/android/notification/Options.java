@@ -27,9 +27,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
+import android.support.v4.media.session.MediaSessionCompat;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationCompat.MessagingStyle.Message;
-import android.support.v4.media.session.MediaSessionCompat;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -52,6 +53,8 @@ import static androidx.core.app.NotificationCompat.PRIORITY_MAX;
 import static androidx.core.app.NotificationCompat.PRIORITY_MIN;
 import static androidx.core.app.NotificationCompat.VISIBILITY_PUBLIC;
 import static androidx.core.app.NotificationCompat.VISIBILITY_SECRET;
+
+;
 
 /**
  * Wrapper around the JSON object passed through JS which contains all possible
