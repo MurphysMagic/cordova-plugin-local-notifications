@@ -1,3 +1,4 @@
+cordova.define("cordova-plugin-local-notification.LocalNotification", function(require, exports, module) {
 /*
  * Apache 2.0 License
  *
@@ -37,6 +38,7 @@ exports._defaults = {
     group         : null,
     groupSummary  : false,
     icon          : null,
+    iconType      : null,
     id            : 0,
     launch        : true,
     led           : true,
@@ -898,7 +900,7 @@ exports._exec = function (action, args, callback, scope) {
 
     if (Array.isArray(args)) {
         params = args;
-    } else if (args) {
+    } else if (args !== null) {
         params.push(args);
     }
 
@@ -1033,4 +1035,6 @@ channel.onCordovaReady.subscribe(function () {
     channel.onCordovaInfoReady.subscribe(function () {
         exports._setLaunchDetails();
     });
+});
+
 });
