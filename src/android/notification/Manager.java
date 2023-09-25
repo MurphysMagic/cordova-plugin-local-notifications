@@ -111,7 +111,7 @@ public final class Manager {
      * @return channel ID of newly created (or reused) channel
      */
     public String buildChannelWithOptions(Uri soundUri, boolean shouldVibrate, boolean hasSound,
-            CharSequence channelName, String channelId) {
+                                          CharSequence channelName, String channelId) {
         String defaultChannelId, newChannelId;
         CharSequence defaultChannelName;
         int importance;
@@ -150,7 +150,7 @@ public final class Manager {
      * Create a channel
      */
     public void createChannel(String channelId, CharSequence channelName, int importance, Boolean shouldVibrate,
-            Uri soundUri) {
+                              Uri soundUri) {
         NotificationManager mgr = getNotMgr();
 
         if (SDK_INT < O)
